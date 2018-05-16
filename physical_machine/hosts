@@ -1,0 +1,5 @@
+[ceph_monitor_servers]
+ceph-rep-05
+
+[ceph_osd_servers]
+ceph-rep-05

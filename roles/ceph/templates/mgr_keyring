@@ -1,0 +1,5 @@
+[mgr.]
+	key = {{ceph_mgr_pass}}
+	caps mgr = "allow *"
+	caps mon = "allow profile mgr"
+	caps osd = "allow *"

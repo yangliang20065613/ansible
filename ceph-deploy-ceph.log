@@ -1,0 +1,544 @@
+[2018-04-26 15:13:53,117][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:13:53,117][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 15:13:53,118][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:13:53,118][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:13:53,118][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:13:53,118][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:13:53,119][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:13:53,119][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x244a2cb0>
+[2018-04-26 15:13:53,119][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:13:53,119][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:13:53,120][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x243fde60>
+[2018-04-26 15:13:53,120][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:13:53,120][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:13:53,120][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 15:13:53,120][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 15:13:53,120][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 15:13:53,121][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 15:13:53,204][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:13:53,212][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:13:53,240][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:13:53,245][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 15:13:53,245][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 15:13:53,247][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 15:13:55,841][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 15:13:55,955][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 15:14:26,245][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 15:14:26,465][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 15:14:26,529][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 15:14:26,529][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 15:14:26,529][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 15:14:26,530][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 15:14:26,545][ceph-rep-05][DEBUG ] Cleaning up list of fastest mirrors
+[2018-04-26 15:14:33,182][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:14:33,183][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 15:14:33,183][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:14:33,183][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:14:33,183][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:14:33,183][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:14:33,183][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:14:33,184][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x1d0a44d0>
+[2018-04-26 15:14:33,184][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:14:33,184][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:14:33,184][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x1cffbed8>
+[2018-04-26 15:14:33,184][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:14:33,184][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:14:33,184][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 15:14:33,237][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:14:33,238][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:14:33,268][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:14:33,273][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 15:14:33,277][ceph_deploy.install][ERROR ] Ceph is still installed on: ['ceph-rep-05']
+[2018-04-26 15:14:33,278][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2018-04-26 15:14:57,155][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:14:57,155][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 15:14:57,155][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:14:57,155][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:14:57,155][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x13664b48>
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x135bbe60>
+[2018-04-26 15:14:57,156][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:14:57,157][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:14:57,157][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 15:14:57,157][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 15:14:57,157][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 15:14:57,157][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 15:14:57,206][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:14:57,207][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:14:57,236][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:14:57,240][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 15:14:57,240][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 15:14:57,242][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 15:14:57,515][ceph-rep-05][WARNING] No Match for argument: ceph
+[2018-04-26 15:14:57,629][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 15:14:57,743][ceph-rep-05][WARNING] No Match for argument: ceph-common
+[2018-04-26 15:14:57,857][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 15:14:57,891][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 15:14:58,111][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 15:14:58,142][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 15:14:58,143][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 15:14:58,143][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 15:14:58,143][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 15:16:24,273][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:16:24,274][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 15:16:24,274][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:16:24,274][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:16:24,274][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:16:24,274][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:16:24,274][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:16:24,275][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x33e844d0>
+[2018-04-26 15:16:24,275][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:16:24,275][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:16:24,275][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x33ddbed8>
+[2018-04-26 15:16:24,275][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:16:24,275][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:16:24,275][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 15:16:24,325][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:16:24,326][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:16:24,356][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:16:24,360][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 15:16:24,404][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:16:24,405][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:16:24,434][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:16:24,441][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 15:16:24,441][ceph-rep-05][INFO  ] purging data on ceph-rep-05
+[2018-04-26 15:16:24,443][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /var/lib/ceph
+[2018-04-26 15:16:24,465][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/multi-user.target.wants/ceph-mon.target
+[2018-04-26 15:16:24,476][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-mon.target.wants
+[2018-04-26 15:16:24,490][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-mgr.target.wants
+[2018-04-26 15:16:24,500][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-osd.target.wants
+[2018-04-26 15:16:24,507][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph.target.wants
+[2018-04-26 15:16:24,513][ceph-rep-05][WARNING] OSDs may still be mounted, trying to unmount them
+[2018-04-26 15:16:24,515][ceph-rep-05][INFO  ] Running command: find /var/lib/ceph -mindepth 1 -maxdepth 2 -type d -exec umount {} ;
+[2018-04-26 15:16:24,528][ceph-rep-05][WARNING] umount: /var/lib/ceph/osd: not mounted
+[2018-04-26 15:16:24,644][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /var/lib/ceph
+[2018-04-26 15:16:24,659][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/ceph/
+[2018-04-26 15:54:14,257][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:54:14,258][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 15:54:14,258][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:54:14,258][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:54:14,258][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:54:14,258][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:54:14,259][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:54:14,259][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x2a79b950>
+[2018-04-26 15:54:14,259][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:54:14,259][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:54:14,259][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x2a7017d0>
+[2018-04-26 15:54:14,259][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:54:14,260][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:54:14,260][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 15:54:14,315][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:54:14,316][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:54:14,346][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:54:14,351][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 15:54:14,352][ceph_deploy.install][ERROR ] Ceph is still installed on: ['ceph-rep-05']
+[2018-04-26 15:54:14,352][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2018-04-26 15:54:50,774][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:54:50,775][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 15:54:50,775][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:54:50,775][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:54:50,775][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:54:50,775][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:54:50,775][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:54:50,776][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x2ddb950>
+[2018-04-26 15:54:50,776][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:54:50,776][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:54:50,776][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x2d417d0>
+[2018-04-26 15:54:50,776][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:54:50,776][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:54:50,776][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 15:54:50,829][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:54:50,830][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:54:50,860][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:54:50,868][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 15:54:50,871][ceph_deploy.install][ERROR ] Ceph is still installed on: ['ceph-rep-05']
+[2018-04-26 15:54:50,871][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2018-04-26 15:54:59,368][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:54:59,369][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 15:54:59,369][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:54:59,369][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:54:59,369][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:54:59,369][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:54:59,369][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:54:59,370][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x2d50bfc8>
+[2018-04-26 15:54:59,370][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:54:59,370][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:54:59,370][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x2d471758>
+[2018-04-26 15:54:59,370][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:54:59,370][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:54:59,370][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 15:54:59,371][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 15:54:59,371][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 15:54:59,371][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 15:54:59,427][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:54:59,428][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:54:59,459][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:54:59,463][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 15:54:59,463][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 15:54:59,465][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 15:54:59,788][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 15:54:59,902][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 15:55:21,263][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 15:55:21,484][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 15:55:21,547][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 15:55:21,548][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 15:55:21,548][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 15:55:21,548][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 15:55:21,548][ceph-rep-05][DEBUG ] Cleaning up list of fastest mirrors
+[2018-04-26 15:56:14,734][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:56:14,734][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 15:56:14,735][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:56:14,735][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:56:14,735][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:56:14,735][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:56:14,735][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:56:14,735][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x1cc9af80>
+[2018-04-26 15:56:14,736][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:56:14,736][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:56:14,736][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x1cc02758>
+[2018-04-26 15:56:14,736][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:56:14,736][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:56:14,736][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 15:56:14,736][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 15:56:14,737][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 15:56:14,737][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 15:56:14,791][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:56:14,792][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:56:14,822][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:56:14,830][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 15:56:14,830][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 15:56:14,832][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 15:56:15,105][ceph-rep-05][WARNING] No Match for argument: ceph
+[2018-04-26 15:56:15,219][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 15:56:15,333][ceph-rep-05][WARNING] No Match for argument: ceph-common
+[2018-04-26 15:56:15,447][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 15:56:15,481][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 15:56:15,701][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 15:56:15,733][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 15:56:15,733][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 15:56:15,733][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 15:56:15,734][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 15:56:19,613][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 15:56:19,614][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 15:56:19,614][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 15:56:19,614][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 15:56:19,614][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 15:56:19,614][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x2e98a998>
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x2e8f27d0>
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 15:56:19,615][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 15:56:19,616][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 15:56:19,677][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:56:19,678][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:56:19,709][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:56:19,716][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 15:56:19,764][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 15:56:19,765][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 15:56:19,795][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 15:56:19,798][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 15:56:19,799][ceph-rep-05][INFO  ] purging data on ceph-rep-05
+[2018-04-26 15:56:19,800][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /var/lib/ceph
+[2018-04-26 15:56:19,823][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/multi-user.target.wants/ceph-mon.target
+[2018-04-26 15:56:19,829][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-mon.target.wants
+[2018-04-26 15:56:19,840][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-mgr.target.wants
+[2018-04-26 15:56:19,851][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-osd.target.wants
+[2018-04-26 15:56:19,858][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph.target.wants
+[2018-04-26 15:56:19,869][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/ceph/
+[2018-04-26 16:03:33,143][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:03:33,143][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x2ddbfc8>
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:03:33,144][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 16:03:33,145][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x2d41758>
+[2018-04-26 16:03:33,145][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:03:33,145][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:03:33,145][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 16:03:33,145][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 16:03:33,145][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 16:03:33,145][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 16:03:33,199][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:03:33,200][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:03:33,230][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:03:33,238][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 16:03:33,238][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 16:03:33,240][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 16:03:33,563][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 16:03:33,677][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 16:03:54,891][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 16:03:55,112][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 16:03:55,175][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 16:03:55,176][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 16:03:55,176][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 16:03:55,176][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 16:03:55,176][ceph-rep-05][DEBUG ] Cleaning up list of fastest mirrors
+[2018-04-26 16:04:02,793][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:04:02,793][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0xf80a998>
+[2018-04-26 16:04:02,794][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:04:02,795][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 16:04:02,795][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0xf7727d0>
+[2018-04-26 16:04:02,795][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:04:02,795][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:04:02,795][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 16:04:02,848][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:04:02,848][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:04:02,879][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:04:02,884][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 16:04:02,886][ceph_deploy.install][ERROR ] Ceph is still installed on: ['ceph-rep-05']
+[2018-04-26 16:04:02,887][ceph_deploy][ERROR ] RuntimeError: refusing to purge data while Ceph is still installed
+
+[2018-04-26 16:04:25,386][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:04:25,387][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purgedata ceph-rep-05
+[2018-04-26 16:04:25,387][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:04:25,387][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:04:25,387][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:04:25,387][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:04:25,388][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:04:25,388][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x20aa998>
+[2018-04-26 16:04:25,388][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:04:25,388][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 16:04:25,388][ceph_deploy.cli][INFO  ]  func                          : <function purgedata at 0x20127d0>
+[2018-04-26 16:04:25,388][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:04:25,389][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:04:25,389][ceph_deploy.install][DEBUG ] Purging data from cluster ceph hosts ceph-rep-05
+[2018-04-26 16:04:25,447][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:04:25,448][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:04:25,478][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:04:25,482][ceph-rep-05][DEBUG ] find the location of an executable
+[2018-04-26 16:04:25,536][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:04:25,537][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:04:25,567][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:04:25,571][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 16:04:25,571][ceph-rep-05][INFO  ] purging data on ceph-rep-05
+[2018-04-26 16:04:25,573][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /var/lib/ceph
+[2018-04-26 16:04:25,596][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/multi-user.target.wants/ceph-mon.target
+[2018-04-26 16:04:25,607][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-mon.target.wants
+[2018-04-26 16:04:25,618][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-mgr.target.wants
+[2018-04-26 16:04:25,628][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph-osd.target.wants
+[2018-04-26 16:04:25,635][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/systemd/system/ceph.target.wants
+[2018-04-26 16:04:25,643][ceph-rep-05][INFO  ] Running command: rm -rf --one-file-system -- /etc/ceph/
+[2018-04-26 16:11:08,986][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:11:08,987][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph
+[2018-04-26 16:11:08,987][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:11:08,987][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:11:08,987][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:11:08,987][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:11:08,987][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:11:08,988][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x19b5bfc8>
+[2018-04-26 16:11:08,988][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:11:08,988][ceph_deploy.cli][INFO  ]  host                          : ['ceph']
+[2018-04-26 16:11:08,988][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x19ac1758>
+[2018-04-26 16:11:08,988][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:11:08,988][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:11:08,989][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 16:11:08,989][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 16:11:08,989][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph
+[2018-04-26 16:11:08,989][ceph_deploy.install][DEBUG ] Detecting platform for host ceph ...
+[2018-04-26 16:11:09,008][ceph_deploy][ERROR ] RuntimeError: connecting to host: ceph resulted in errors: IOError [Errno 32] Broken pipe
+
+[2018-04-26 16:11:15,485][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:11:15,485][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-005
+[2018-04-26 16:11:15,485][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:11:15,485][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:11:15,486][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:11:15,486][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:11:15,486][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:11:15,486][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x1d57bfc8>
+[2018-04-26 16:11:15,486][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:11:15,486][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-005']
+[2018-04-26 16:11:15,487][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x1d4e1758>
+[2018-04-26 16:11:15,487][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:11:15,487][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:11:15,487][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 16:11:15,487][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 16:11:15,487][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-005
+[2018-04-26 16:11:15,487][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-005 ...
+[2018-04-26 16:11:15,508][ceph_deploy][ERROR ] RuntimeError: connecting to host: ceph-rep-005 resulted in errors: HostNotFound ceph-rep-005
+
+[2018-04-26 16:11:18,717][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:11:18,718][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 16:11:18,718][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:11:18,718][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:11:18,718][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:11:18,718][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:11:18,719][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:11:18,719][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x45fbfc8>
+[2018-04-26 16:11:18,719][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:11:18,719][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 16:11:18,719][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x4561758>
+[2018-04-26 16:11:18,719][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:11:18,720][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:11:18,720][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 16:11:18,720][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 16:11:18,720][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 16:11:18,720][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 16:11:18,776][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:11:18,777][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:11:18,808][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:11:18,812][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 16:11:18,813][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 16:11:18,817][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 16:11:19,190][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 16:11:19,254][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 16:11:40,368][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 16:11:40,589][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 16:11:40,653][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 16:11:40,653][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 16:11:40,653][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 16:11:40,653][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 16:11:40,653][ceph-rep-05][DEBUG ] Cleaning up list of fastest mirrors
+[2018-04-26 16:11:43,564][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:11:43,565][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x3dedaf80>
+[2018-04-26 16:11:43,566][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:11:43,566][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 16:11:43,566][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x3de42758>
+[2018-04-26 16:11:43,566][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:11:43,566][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:11:43,566][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 16:11:43,566][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 16:11:43,566][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 16:11:43,567][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 16:11:43,621][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:11:43,622][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:11:43,653][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:11:43,657][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 16:11:43,657][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 16:11:43,659][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 16:11:43,933][ceph-rep-05][WARNING] No Match for argument: ceph
+[2018-04-26 16:11:44,047][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 16:11:44,161][ceph-rep-05][WARNING] No Match for argument: ceph-common
+[2018-04-26 16:11:44,275][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 16:11:44,341][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 16:11:44,561][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 16:11:44,625][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 16:11:44,625][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 16:11:44,625][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 16:11:44,626][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 16:27:27,209][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-26 16:27:27,209][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-26 16:27:27,209][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-26 16:27:27,209][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-26 16:27:27,210][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-26 16:27:27,210][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-26 16:27:27,210][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-26 16:27:27,210][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x161dbfc8>
+[2018-04-26 16:27:27,210][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-26 16:27:27,210][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-26 16:27:27,211][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x16141758>
+[2018-04-26 16:27:27,211][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-26 16:27:27,211][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-26 16:27:27,211][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-26 16:27:27,211][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-26 16:27:27,211][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-26 16:27:27,212][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-26 16:27:27,268][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-26 16:27:27,269][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-26 16:27:27,300][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-26 16:27:27,308][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-26 16:27:27,308][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-26 16:27:27,310][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-26 16:27:27,634][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-26 16:27:27,748][ceph-rep-05][WARNING] No Match for argument: ceph-radosgw
+[2018-04-26 16:27:48,911][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-26 16:27:49,131][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-26 16:27:49,195][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-26 16:27:49,195][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-26 16:27:49,195][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-26 16:27:49,195][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+[2018-04-26 16:27:49,196][ceph-rep-05][DEBUG ] Cleaning up list of fastest mirrors
+[2018-04-27 14:49:55,934][ceph_deploy.conf][DEBUG ] found configuration file at: /root/.cephdeploy.conf
+[2018-04-27 14:49:55,935][ceph_deploy.cli][INFO  ] Invoked (1.5.39): /usr/bin/ceph-deploy purge ceph-rep-05
+[2018-04-27 14:49:55,935][ceph_deploy.cli][INFO  ] ceph-deploy options:
+[2018-04-27 14:49:55,935][ceph_deploy.cli][INFO  ]  username                      : None
+[2018-04-27 14:49:55,935][ceph_deploy.cli][INFO  ]  verbose                       : False
+[2018-04-27 14:49:55,935][ceph_deploy.cli][INFO  ]  overwrite_conf                : False
+[2018-04-27 14:49:55,935][ceph_deploy.cli][INFO  ]  quiet                         : False
+[2018-04-27 14:49:55,936][ceph_deploy.cli][INFO  ]  cd_conf                       : <ceph_deploy.conf.cephdeploy.Conf instance at 0x34d94c68>
+[2018-04-27 14:49:55,936][ceph_deploy.cli][INFO  ]  cluster                       : ceph
+[2018-04-27 14:49:55,936][ceph_deploy.cli][INFO  ]  host                          : ['ceph-rep-05']
+[2018-04-27 14:49:55,936][ceph_deploy.cli][INFO  ]  func                          : <function purge at 0x34ceee60>
+[2018-04-27 14:49:55,936][ceph_deploy.cli][INFO  ]  ceph_conf                     : None
+[2018-04-27 14:49:55,936][ceph_deploy.cli][INFO  ]  default_release               : False
+[2018-04-27 14:49:55,936][ceph_deploy.install][INFO  ] note that some dependencies *will not* be removed because they can cause issues with qemu-kvm
+[2018-04-27 14:49:55,936][ceph_deploy.install][INFO  ] like: librbd1 and librados2
+[2018-04-27 14:49:55,937][ceph_deploy.install][DEBUG ] Purging on cluster ceph hosts ceph-rep-05
+[2018-04-27 14:49:55,937][ceph_deploy.install][DEBUG ] Detecting platform for host ceph-rep-05 ...
+[2018-04-27 14:49:55,987][ceph-rep-05][DEBUG ] connected to host: ceph-rep-05 
+[2018-04-27 14:49:55,988][ceph-rep-05][DEBUG ] detect platform information from remote host
+[2018-04-27 14:49:56,017][ceph-rep-05][DEBUG ] detect machine type
+[2018-04-27 14:49:56,022][ceph_deploy.install][INFO  ] Distro info: CentOS Linux 7.4.1708 AltArch
+[2018-04-27 14:49:56,022][ceph-rep-05][INFO  ] Purging Ceph on ceph-rep-05
+[2018-04-27 14:49:56,024][ceph-rep-05][INFO  ] Running command: yum -y -q remove ceph ceph-release ceph-common ceph-radosgw
+[2018-04-27 14:49:56,348][ceph-rep-05][WARNING] No Match for argument: ceph-release
+[2018-04-27 14:49:57,764][ceph-rep-05][WARNING] Warning: RPMDB altered outside of yum.
+[2018-04-27 14:49:58,529][ceph-rep-05][WARNING] ** Found 37 pre-existing rpmdb problem(s), 'yum check' output follows:
+[2018-04-27 14:49:58,530][ceph-rep-05][WARNING] 2:ceph-debuginfo-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:ceph-debuginfo-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,530][ceph-rep-05][WARNING] 2:ceph-fuse-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:ceph-fuse-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,530][ceph-rep-05][WARNING] 2:cephfs-java-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:cephfs-java-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,530][ceph-rep-05][WARNING] 2:libcephfs-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:libcephfs-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,530][ceph-rep-05][WARNING] 2:libcephfs2-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:libcephfs2-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,530][ceph-rep-05][WARNING] 2:libcephfs2-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:libcephfs2-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,531][ceph-rep-05][WARNING] 2:libcephfs_jni-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:libcephfs_jni-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,531][ceph-rep-05][WARNING] 2:libcephfs_jni1-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:libcephfs_jni1-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,531][ceph-rep-05][WARNING] 2:librados-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:librados-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,531][ceph-rep-05][WARNING] 2:librados2-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:librados2-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,531][ceph-rep-05][WARNING] 2:librados2-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:librados2-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,531][ceph-rep-05][WARNING] 2:libradosstriper-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:libradosstriper-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,532][ceph-rep-05][WARNING] 2:libradosstriper1-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:libradosstriper1-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,532][ceph-rep-05][WARNING] 2:libradosstriper1-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:libradosstriper1-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,532][ceph-rep-05][WARNING] 2:librbd-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:librbd-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,532][ceph-rep-05][WARNING] 2:librbd1-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:librbd1-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,532][ceph-rep-05][WARNING] 2:librbd1-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:librbd1-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,532][ceph-rep-05][WARNING] 2:librgw-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:librgw-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,533][ceph-rep-05][WARNING] 2:librgw2-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:librgw2-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,533][ceph-rep-05][WARNING] 2:librgw2-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:librgw2-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,533][ceph-rep-05][WARNING] 2:python-ceph-compat-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python-ceph-compat-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,533][ceph-rep-05][WARNING] 2:python-cephfs-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:python-cephfs-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,533][ceph-rep-05][WARNING] 2:python-cephfs-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python-cephfs-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,534][ceph-rep-05][WARNING] 2:python-rados-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:python-rados-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,534][ceph-rep-05][WARNING] 2:python-rados-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python-rados-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,534][ceph-rep-05][WARNING] 2:python-rbd-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:python-rbd-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,534][ceph-rep-05][WARNING] 2:python-rbd-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python-rbd-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,534][ceph-rep-05][WARNING] 2:python-rgw-12.2.0-3.gce34351.el7.centos.aarch64 is a duplicate with 2:python-rgw-v12.2.0-3.hxt.el7.centos.aarch64
+[2018-04-27 14:49:58,534][ceph-rep-05][WARNING] 2:python-rgw-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python-rgw-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,535][ceph-rep-05][WARNING] 2:python34-ceph-argparse-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python34-ceph-argparse-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,535][ceph-rep-05][WARNING] 2:python34-cephfs-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python34-cephfs-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,535][ceph-rep-05][WARNING] 2:python34-rados-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python34-rados-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,535][ceph-rep-05][WARNING] 2:python34-rbd-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python34-rbd-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,535][ceph-rep-05][WARNING] 2:python34-rgw-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:python34-rgw-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,535][ceph-rep-05][WARNING] 2:rados-objclass-devel-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:rados-objclass-devel-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,536][ceph-rep-05][WARNING] 2:rbd-fuse-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:rbd-fuse-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:49:58,536][ceph-rep-05][WARNING] 2:rbd-nbd-13.0.2-0.el7.centos.aarch64 is a duplicate with 2:rbd-nbd-12.2.0-3.gce34351.el7.centos.aarch64
+[2018-04-27 14:50:20,393][ceph-rep-05][INFO  ] Running command: yum clean all
+[2018-04-27 14:50:20,612][ceph-rep-05][DEBUG ] Loaded plugins: fastestmirror
+[2018-04-27 14:50:20,676][ceph-rep-05][DEBUG ] Cleaning repos: base centos-sclo-rh-testing docker-ce-stable epel extras
+[2018-04-27 14:50:20,676][ceph-rep-05][DEBUG ]               : hxt-dev-ceph updates
+[2018-04-27 14:50:20,677][ceph-rep-05][DEBUG ] Cleaning up everything
+[2018-04-27 14:50:20,677][ceph-rep-05][DEBUG ] Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos

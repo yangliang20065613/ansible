@@ -1,0 +1,3 @@
+ceph_public_iface: "eth0"
+ceph_host_osds:
+  - sda

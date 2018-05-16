@@ -1,0 +1,69 @@
+- name: Copy the bootstrap osd keyring
+  file: src=/etc/ceph/ceph.client.bootstrap-osd.keyring state=link force=yes
+        dest=/var/lib/ceph/bootstrap-osd/ceph.keyring
+
+#- name: Check if disk /dev/{{item}} is prepared
+#  shell: ceph-disk list | grep "ceph data" | grep /dev/{{item}}
+#  ignore_errors: yes
+#  changed_when: false
+#  register: ceph_disk_list
+#
+#- name: Deactivate disk /dev/{{item}}
+#  ignore_errors: yes
+#  when: ceph_disk_list is defined and (ceph_disk_list.rc == 0) and ceph_force_prepare
+#  changed_when: false
+#  command: ceph-disk deactivate --mark-out /dev/{{item}}1
+#
+#- name: Check if disk /dev/{{item}} is mounted
+#  shell: grep /dev/{{item}} /proc/mounts
+#  ignore_errors: yes
+#  changed_when: false
+#  register: grep_proc_mounts
+#
+#- name: Parted disk /dev/{{item}}
+#  command: parted -s /dev/{{item}} mklabel gpt
+#
+#- name: Prepare disk /dev/{{item}}
+#  when: ((ceph_disk_list is defined and ceph_disk_list.rc != 0) or ceph_force_prepare) and (grep_proc_mounts is defined and grep_proc_mounts.rc != 0)
+#  command: ceph-disk prepare --zap-disk --cluster ceph --cluster-uuid {{ceph_fsid}} --bluestore /dev/{{item}} 
+#  register: ceph_disk
+#
+#- name: Activate disk /dev/{{item}}
+#  when: ceph_disk is defined and ceph_disk.changed
+#  command: ceph-disk activate /dev/{{item}}1
+#
+
+
+- name: Ceph create osd
+  command: ceph osd create
+  register: osd_id
+
+- name: create ceph osd directory
+  file:
+    path: /var/lib/ceph/osd/ceph-{{osd_id.stdout}}
+    state: directory
+    mode: "0755"
+
+- name: change owner of ceph osd directory
+  command: chown ceph:ceph /var/lib/ceph/osd/ceph-{{osd_id.stdout}}
+
+- name: Create osd key
+  command: ceph auth get-or-create osd.{{osd_id.stdout}} mon 'allow profile osd' osd 'allow *' -o /var/lib/ceph/osd/ceph-{{osd_id.stdout}}/keyring 
+  args:
+    creates: /var/lib/ceph/osd/ceph-{{osd_id.stdout}}/keyring
+
+- name: Ceph osd mkfs with keyring
+  ignore_errors: yes
+  command: ceph-osd -i {{osd_id.stdout}} --mkfs
+  args:
+    creates: /var/lib/ceph/mon/ceph-{{osd_id.stdout}}/keyring
+
+- name: Ensure the osd is enabled and running
+  service: name=ceph-osd@{{osd_id.stdout}} enabled=yes state=started
+
+- name: Enable the ceph-osd.target service
+  systemd: name=ceph-osd.target enabled=yes masked=no
+
+
+
+
