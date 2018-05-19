@@ -1,0 +1,10 @@
+[mon.]
+	key = AQD+HM9XTYv+CRAAK8PqN/vLYxetv18R0gnSAw==
+	caps mon = "allow *"
+
+[client.admin]
+	key = AQA1Hc9XXWHTNBAAckb3I3kYvZ97GSwl0jkyLA==
+	caps mon = "allow *"
+	caps osd = "allow *"
+	caps mds = "allow *"
+	caps mgr = "allow *"

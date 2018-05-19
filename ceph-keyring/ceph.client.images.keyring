@@ -1,0 +1,4 @@
+[client.images]
+	key = AQBrHc9XZNzwMBAAwhPr4Gbcn77E/6AezPMhqg==
+	caps mon = "allow r"
+	caps osd = "allow class-read object_prefix rbd_children, allow rwx pool=images"
