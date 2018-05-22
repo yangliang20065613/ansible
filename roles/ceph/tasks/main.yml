@@ -32,5 +32,7 @@
 
 - {include: osd.yml, with_items: "{{ceph_host_osds}}",
    when: "{{osd}}"}
+- {include: spdk-osd.yml, with_items: "{{ceph_host_osds}}",
+   when: "{{spdk}}"}
 - {include: mon.yml,
    when: "{{mon}}"}

@@ -14,7 +14,7 @@
     - ["physical_machine/deployment-vars"]
     - ["physical_machine/host_vars/{{inventory_hostname}}", "vars/empty"]
   roles:
-    - {role: ceph, osd: False, mon: True, tags: [ceph-mon]}
+    - {role: ceph, osd: False, mon: True, spdk: False, tags: [ceph-mon]}
 
 # Quorum is required to start defining users and pools (configure ceph).
 # The configuration should be done after the Ceph Monitors have been
@@ -38,5 +38,13 @@
     - ["physical_machine/deployment-vars"]
     - ["physical_machine/host_vars/{{inventory_hostname}}", "vars/empty"]
   roles:
-    - {role: ceph, osd: True, mon: False, tags: [ceph-osd]}
+    - {role: ceph, osd: True, mon: False, spdk: False, tags: [ceph-osd]}
 
+- name: Configure Ceph OSDs with SPDK 
+  hosts: ceph_osd_servers
+  become: yes
+  vars_files:
+    - ["physical_machine/deployment-vars"]
+    - ["physical_machine/host_vars/{{inventory_hostname}}", "vars/empty"]
+  roles:
+    - {role: ceph, osd: False, mon: False, spdk: True, tags: [ceph-spdk-osd]}
