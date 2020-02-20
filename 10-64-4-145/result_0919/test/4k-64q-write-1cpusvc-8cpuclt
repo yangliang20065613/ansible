@@ -1,0 +1,40 @@
+filename1: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename2: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename3: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename4: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename5: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename6: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename7: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+filename8: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=spdk_bdev, iodepth=64
+fio-3.3
+Starting 8 threads
+Starting SPDK v18.04.1 / DPDK 18.02.0 initialization...
+[ DPDK EAL parameters: fio -c 0x1 --file-prefix=spdk_pid5577 ]
+EAL: Multi-process socket /var/run/.spdk_pid5577_unix
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+
+filename1: (groupid=0, jobs=8): err= 0: pid=5600: Wed Sep 12 15:21:21 2018
+  write: IOPS=556k, BW=2172MiB/s (2278MB/s)(127GiB/60002msec)
+    slat (nsec): min=550, max=49200, avg=681.25, stdev=114.48
+    clat (usec): min=138, max=3293, avg=919.27, stdev=14.52
+     lat (usec): min=139, max=3294, avg=919.95, stdev=14.52
+    clat percentiles (usec):
+     |  1.00th=[  898],  5.00th=[  906], 10.00th=[  914], 20.00th=[  914],
+     | 30.00th=[  914], 40.00th=[  914], 50.00th=[  914], 60.00th=[  922],
+     | 70.00th=[  922], 80.00th=[  922], 90.00th=[  930], 95.00th=[  938],
+     | 99.00th=[  955], 99.50th=[  955], 99.90th=[  963], 99.95th=[  971],
+     | 99.99th=[  979]
+   bw (  KiB/s): min=276856, max=283131, per=12.54%, avg=278956.36, stdev=1544.34, samples=960
+   iops        : min=69214, max=70782, avg=69738.94, stdev=385.94, samples=960
+  lat (usec)   : 250=0.01%, 500=0.01%, 750=0.01%, 1000=99.98%
+  lat (msec)   : 2=0.01%, 4=0.01%
+  cpu          : usr=99.96%, sys=0.00%, ctx=24160, majf=0, minf=0
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=18.0%, >=64=82.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.1%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwt: total=0,33366965,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+  WRITE: bw=2172MiB/s (2278MB/s), 2172MiB/s-2172MiB/s (2278MB/s-2278MB/s), io=127GiB (137GB), run=60002-60002msec

@@ -1,0 +1,32 @@
+filename1: (g=0): rw=randread, bs=(R) 2048B-2048B, (W) 2048B-2048B, (T) 2048B-2048B, ioengine=spdk_bdev, iodepth=32
+fio-3.3
+Starting 1 thread
+Starting SPDK v18.04.1 / DPDK 18.02.0 initialization...
+[ DPDK EAL parameters: fio -c 0x1 --file-prefix=spdk_pid7586 ]
+EAL: Multi-process socket /var/run/.spdk_pid7586_unix
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+
+filename1: (groupid=0, jobs=1): err= 0: pid=7609: Wed Sep 12 13:21:47 2018
+   read: IOPS=380k, BW=743MiB/s (779MB/s)(43.5GiB/60001msec)
+    slat (nsec): min=600, max=202300, avg=728.69, stdev=141.04
+    clat (usec): min=15, max=329, avg=82.30, stdev=11.80
+     lat (usec): min=56, max=330, avg=83.03, stdev=11.80
+    clat percentiles (usec):
+     |  1.00th=[   66],  5.00th=[   71], 10.00th=[   72], 20.00th=[   74],
+     | 30.00th=[   75], 40.00th=[   77], 50.00th=[   78], 60.00th=[   83],
+     | 70.00th=[   89], 80.00th=[   92], 90.00th=[   95], 95.00th=[  101],
+     | 99.00th=[  126], 99.50th=[  135], 99.90th=[  151], 99.95th=[  161],
+     | 99.99th=[  182]
+   bw (  KiB/s): min=727652, max=763348, per=99.98%, avg=760246.69, stdev=3381.65, samples=119
+   iops        : min=363826, max=381672, avg=380123.43, stdev=1690.81, samples=119
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=94.71%, 250=5.29%, 500=0.01%
+  cpu          : usr=99.95%, sys=0.00%, ctx=4221, majf=0, minf=0
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=35.0%, 32=65.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.7%, 8=0.3%, 16=0.1%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwt: total=22812018,0,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+   READ: bw=743MiB/s (779MB/s), 743MiB/s-743MiB/s (779MB/s-779MB/s), io=43.5GiB (46.7GB), run=60001-60001msec

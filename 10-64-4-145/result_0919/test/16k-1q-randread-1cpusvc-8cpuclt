@@ -1,0 +1,39 @@
+filename1: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename2: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename3: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename4: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename5: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename6: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename7: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+filename8: (g=0): rw=randread, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=1
+fio-3.3
+Starting 8 threads
+Starting SPDK v18.04.1 / DPDK 18.02.0 initialization...
+[ DPDK EAL parameters: fio -c 0x1 --file-prefix=spdk_pid7904 ]
+EAL: Multi-process socket /var/run/.spdk_pid7904_unix
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+
+filename1: (groupid=0, jobs=8): err= 0: pid=7927: Wed Sep 12 20:50:10 2018
+   read: IOPS=85.4k, BW=1334MiB/s (1399MB/s)(78.2GiB/60001msec)
+    slat (nsec): min=600, max=23300, avg=652.82, stdev=85.85
+    clat (usec): min=66, max=183, avg=92.54, stdev= 8.62
+     lat (usec): min=80, max=184, avg=93.19, stdev= 8.62
+    clat percentiles (usec):
+     |  1.00th=[   82],  5.00th=[   83], 10.00th=[   83], 20.00th=[   84],
+     | 30.00th=[   85], 40.00th=[   86], 50.00th=[   91], 60.00th=[   99],
+     | 70.00th=[  100], 80.00th=[  101], 90.00th=[  103], 95.00th=[  105],
+     | 99.00th=[  110], 99.50th=[  112], 99.90th=[  119], 99.95th=[  125],
+     | 99.99th=[  141]
+   bw (  KiB/s): min=165301, max=174112, per=12.50%, avg=170834.47, stdev=1951.27, samples=953
+   iops        : min=10331, max=10882, avg=10677.08, stdev=121.94, samples=953
+  lat (usec)   : 100=74.28%, 250=25.72%
+  cpu          : usr=99.97%, sys=0.00%, ctx=24123, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwt: total=5124244,0,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=1334MiB/s (1399MB/s), 1334MiB/s-1334MiB/s (1399MB/s-1399MB/s), io=78.2GiB (83.0GB), run=60001-60001msec

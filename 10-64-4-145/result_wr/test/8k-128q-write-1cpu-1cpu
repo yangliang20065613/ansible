@@ -1,0 +1,38 @@
+filename1: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=spdk_bdev, iodepth=128
+filename2: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=spdk_bdev, iodepth=128
+filename3: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=spdk_bdev, iodepth=128
+filename4: (g=0): rw=write, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=spdk_bdev, iodepth=128
+fio-3.3
+Starting 4 threads
+Starting SPDK v18.04.1 / DPDK 18.02.0 initialization...
+[ DPDK EAL parameters: fio -c 0x1 --file-prefix=spdk_pid5900 ]
+EAL: Multi-process socket /var/run/.spdk_pid5900_unix
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+
+filename1: (groupid=0, jobs=4): err= 0: pid=5923: Tue Sep 11 17:12:42 2018
+  write: IOPS=315k, BW=2460MiB/s (2579MB/s)(144GiB/60019msec)
+    slat (nsec): min=650, max=40028k, avg=2943.97, stdev=259276.82
+    clat (usec): min=22, max=60395, avg=1616.80, stdev=6053.66
+     lat (usec): min=22, max=60396, avg=1619.74, stdev=6058.66
+    clat percentiles (usec):
+     |  1.00th=[   31],  5.00th=[   69], 10.00th=[  128], 20.00th=[  208],
+     | 30.00th=[  277], 40.00th=[  334], 50.00th=[  375], 60.00th=[  424],
+     | 70.00th=[  494], 80.00th=[  578], 90.00th=[  701], 95.00th=[ 1303],
+     | 99.00th=[30802], 99.50th=[40109], 99.90th=[40633], 99.95th=[41681],
+     | 99.99th=[42730]
+   bw (  KiB/s): min=558674, max=693888, per=25.02%, avg=630183.09, stdev=27230.35, samples=479
+   iops        : min=69834, max=86736, avg=78772.76, stdev=3403.87, samples=479
+  lat (usec)   : 50=3.40%, 100=4.19%, 250=18.30%, 500=45.15%, 750=20.47%
+  lat (usec)   : 1000=2.76%
+  lat (msec)   : 2=1.25%, 4=0.42%, 10=0.01%, 20=0.01%, 50=4.05%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=24.99%, sys=0.00%, ctx=7062, majf=0, minf=0
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.2%, 16=0.5%, 32=1.0%, >=64=98.2%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.9%, 8=0.1%, 16=0.1%, 32=0.1%, 64=0.1%, >=64=0.1%
+     issued rwt: total=0,18896826,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=2460MiB/s (2579MB/s), 2460MiB/s-2460MiB/s (2579MB/s-2579MB/s), io=144GiB (155GB), run=60019-60019msec

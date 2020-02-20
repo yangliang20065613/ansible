@@ -1,0 +1,35 @@
+filename1: (g=0): rw=read, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=2
+filename2: (g=0): rw=read, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=2
+filename3: (g=0): rw=read, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=2
+filename4: (g=0): rw=read, bs=(R) 16.0KiB-16.0KiB, (W) 16.0KiB-16.0KiB, (T) 16.0KiB-16.0KiB, ioengine=spdk_bdev, iodepth=2
+fio-3.3
+Starting 4 threads
+Starting SPDK v18.04.1 / DPDK 18.02.0 initialization...
+[ DPDK EAL parameters: fio -c 0x1 --file-prefix=spdk_pid5988 ]
+EAL: Multi-process socket /var/run/.spdk_pid5988_unix
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+
+filename1: (groupid=0, jobs=4): err= 0: pid=6003: Thu Sep 20 10:52:39 2018
+   read: IOPS=174k, BW=2726MiB/s (2859MB/s)(160GiB/60001msec)
+    slat (nsec): min=600, max=29100, avg=648.53, stdev=79.93
+    clat (usec): min=10, max=220, avg=44.74, stdev= 2.16
+     lat (usec): min=22, max=221, avg=45.39, stdev= 2.16
+    clat percentiles (nsec):
+     |  1.00th=[38656],  5.00th=[41728], 10.00th=[42752], 20.00th=[43776],
+     | 30.00th=[44288], 40.00th=[44800], 50.00th=[44800], 60.00th=[45312],
+     | 70.00th=[45312], 80.00th=[46336], 90.00th=[46848], 95.00th=[47360],
+     | 99.00th=[50432], 99.50th=[51968], 99.90th=[60160], 99.95th=[64768],
+     | 99.99th=[74240]
+   bw (  KiB/s): min=695808, max=700697, per=25.01%, avg=698281.53, stdev=1031.46, samples=477
+   iops        : min=43488, max=43793, avg=43642.43, stdev=64.41, samples=477
+  lat (usec)   : 20=0.01%, 50=98.85%, 100=1.15%, 250=0.01%
+  cpu          : usr=99.98%, sys=0.00%, ctx=12092, majf=0, minf=0
+  IO depths    : 1=0.1%, 2=100.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwt: total=10468808,0,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=2
+
+Run status group 0 (all jobs):
+   READ: bw=2726MiB/s (2859MB/s), 2726MiB/s-2726MiB/s (2859MB/s-2859MB/s), io=160GiB (172GB), run=60001-60001msec

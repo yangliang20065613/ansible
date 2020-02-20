@@ -1,0 +1,40 @@
+filename1: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename2: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename3: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename4: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename5: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename6: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename7: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+filename8: (g=0): rw=read, bs=(R) 512B-512B, (W) 512B-512B, (T) 512B-512B, ioengine=spdk_bdev, iodepth=1
+fio-3.3
+Starting 8 threads
+Starting SPDK v18.04.1 / DPDK 18.02.0 initialization...
+[ DPDK EAL parameters: fio -c 0x1 --file-prefix=spdk_pid6366 ]
+EAL: Multi-process socket /var/run/.spdk_pid6366_unix
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+
+filename1: (groupid=0, jobs=8): err= 0: pid=6389: Wed Sep 12 15:39:03 2018
+   read: IOPS=478k, BW=234MiB/s (245MB/s)(13.7GiB/60001msec)
+    slat (nsec): min=550, max=36000, avg=644.70, stdev=85.59
+    clat (nsec): min=1150, max=82450, avg=15623.40, stdev=1291.97
+     lat (nsec): min=13300, max=90250, avg=16268.09, stdev=1291.77
+    clat percentiles (nsec):
+     |  1.00th=[13760],  5.00th=[14272], 10.00th=[14656], 20.00th=[14912],
+     | 30.00th=[15168], 40.00th=[15296], 50.00th=[15424], 60.00th=[15552],
+     | 70.00th=[15808], 80.00th=[16064], 90.00th=[16768], 95.00th=[17536],
+     | 99.00th=[19328], 99.50th=[20864], 99.90th=[29568], 99.95th=[37632],
+     | 99.99th=[42240]
+   bw (  KiB/s): min=29504, max=29984, per=12.50%, avg=29892.25, stdev=57.81, samples=953
+   iops        : min=59010, max=59968, avg=59784.63, stdev=115.68, samples=953
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=99.36%, 50=0.63%
+  lat (usec)   : 100=0.01%
+  cpu          : usr=99.98%, sys=0.00%, ctx=24228, majf=0, minf=0
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwt: total=28693219,0,0, short=0,0,0, dropped=0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=234MiB/s (245MB/s), 234MiB/s-234MiB/s (245MB/s-245MB/s), io=13.7GiB (14.7GB), run=60001-60001msec
